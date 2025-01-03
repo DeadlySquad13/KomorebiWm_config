@@ -1,4 +1,5 @@
 #SingleInstance Force
+#Requires AutoHotkey >=2.0
 
 ; Load library
 #Include komorebic.lib.ahk
