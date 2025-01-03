@@ -3,6 +3,10 @@
 ; Load library
 #Include komorebic.lib.ahk
 
+IdentifyBorderOverflowApplication("exe", "GoldenDict.exe")
+IdentifyTrayApplication("exe", "flux.exe")
+return
+
 ; ; Focus windows
 ; Left hand.
 !s::Focus("left")
@@ -63,7 +67,18 @@
 !2::FocusWorkspace(1)
 !3::FocusWorkspace(2)
 
-; ; Move windows across workspaces
+; Move windows across workspaces
 !+1::MoveToWorkspace(0)
 !+2::MoveToWorkspace(1)
 !+3::MoveToWorkspace(2)
+
+; ; Monitors
+; 0 - main, 1 - right, 2 - left
+!e::FocusMonitor(0)
+!i::FocusMonitor(1)
+!a::FocusMonitor(2)
+
+; Move windows across monitors
+!+e::MoveToMonitor(0)
+!+i::MoveToMonitor(1)
+!+a::MoveToMonitor(2)

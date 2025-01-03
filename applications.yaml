@@ -1520,3 +1520,12 @@
   - kind: Exe
     id: ueli.exe
     matching_strategy: Equals
+- name: 1Password
+  identifier:
+    kind: Exe
+    id: 1Password.exe
+    matching_strategy: Equals
+  float_identifiers:
+  - kind: Exe
+    id: 1Password.exe
+    matching_strategy: Equals
