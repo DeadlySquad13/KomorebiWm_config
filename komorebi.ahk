@@ -8,6 +8,12 @@ IdentifyBorderOverflowApplication("exe", "GoldenDict.exe")
 IdentifyTrayApplication("exe", "flux.exe")
 return
 
+; Layout
+!+Enter::Promote()
+; ; Layouts
+!+/::FlipLayout("horizontal")
+!/::FlipLayout("vertical")
+
 ; ; Focus windows
 ; Left hand.
 !s::Focus("left")
@@ -34,16 +40,15 @@ return
 !+n::Move("down")
 !+m::Move("up")
 !+t::Move("right")
-!+Enter::Promote()
 
 ; ; Stack windows
 !Left::Stack("left")
 !Right::Stack("right")
 !Up::Stack("up")
 !Down::Stack("down")
-; !;::Unstack()
-; ![::CycleStack("previous")
-; !]::CycleStack("next")
+!Q::Unstack()
+![::CycleStack("previous")
+!]::CycleStack("next")
 
 ; ; Resize
 !,::ResizeAxis("horizontal", "increase")
@@ -51,27 +56,35 @@ return
 !-::ResizeAxis("vertical", "increase")
 !+-::ResizeAxis("vertical", "decrease")
 
-; ; Manipulate windows
-!f::ToggleFloat()
-!+f::ToggleMonocle()
+; ; Manipulate windows.
+!Enter::ToggleFloat()
+; - Mappings don't work.
+!+.::Minimize()
+!+u::ToggleMonocle()
+
+!+f::Minimize()
+!f::ToggleMonocle()
+!x::Close()
 
 ; ; Window manager options
 !+r::Retile()
 ; !p::TogglePause()
 
-; ; Layouts
-!+/::FlipLayout("horizontal")
-!/::FlipLayout("vertical")
-
 ; ; Workspaces
 !1::FocusWorkspace(0)
 !2::FocusWorkspace(1)
 !3::FocusWorkspace(2)
+!4::FocusWorkspace(3)
+!5::FocusWorkspace(4)
+!6::FocusWorkspace(5)
 
 ; Move windows across workspaces
 !+1::MoveToWorkspace(0)
 !+2::MoveToWorkspace(1)
 !+3::MoveToWorkspace(2)
+!+4::MoveToWorkspace(3)
+!+5::MoveToWorkspace(4)
+!+6::MoveToWorkspace(5)
 
 ; ; Monitors
 ; 0 - main, 1 - right, 2 - left
