@@ -7,39 +7,52 @@
   "default_container_padding": 2,
   "named_workspace_padding": 2,
   "named_container_padding": 2,
-  "border": false,
+  "border": true,
   "border_colours": {
-    "single": { "r": 66, "g": 165, "b": 245 },
-    "stack": { "r": 256, "g": 165, "b": 66 },
-    "monocle": { "r": 255, "g": 51, "b": 153 }
+    "unfocused": { "r": 49, "g": 50, "b": 68 },
+    "single": { "r": 137, "g": 180, "b": 250 },
+    "stack": { "r": 205, "g": 214, "b": 244 },
+    "monocle": { "r": 255, "g": 255, "b": 255 }
+  },
+  "stackbar": {
+    "height": 32,
+    "mode": "OnStack",
+    "tabs": {
+      "font_size": 28,
+      "font_family": "JetBrainsMono NF",
+      "width": 300,
+      "focused_text": { "r": 255, "g": 255, "b": 255 },
+      "unfocused_text": { "r": 205, "g": 214, "b": 244 },
+      "background": { "r": 49, "g": 50, "b": 68 }
+    }
   },
   "resize_delta": 100,
   "monitors": [
     {
       "workspaces": [
         { "name": "I", "layout": "BSP" },
-        { "name": "II", "layout": "VerticalStack" },
+        { "name": "II", "layout": "UltrawideVerticalStack" },
         { "name": "III", "layout": "HorizontalStack" },
-        { "name": "IV", "layout": "UltrawideVerticalStack" },
+        { "name": "IV", "layout": "Grid" },
+        { "name": "V", "layout": "VerticalStack" }
+      ]
+    },
+    {
+      "workspaces": [
+        { "name": "I", "layout": "Rows" },
+        { "name": "II", "layout": "BSP" },
+        { "name": "III", "layout": "HorizontalStack" },
+        { "name": "IV", "layout": "Rows" },
         { "name": "V", "layout": "Rows" }
       ]
     },
     {
       "workspaces": [
-        { "name": "I", "layout": "HorizontalStack" },
-        { "name": "II", "layout": "BSP" },
-        { "name": "III", "layout": "VerticalStack" },
-        { "name": "IV", "layout": "UltrawideVerticalStack" },
-        { "name": "V", "layout": "Rows" }
-      ]
-    },
-    {
-      "workspaces": [
-        { "name": "I", "layout": "VerticalStack" },
-        { "name": "II", "layout": "BSP" },
+        { "name": "I", "layout": "UltrawideVerticalStack" },
+        { "name": "II", "layout": "UltrawideVerticalStack" },
         { "name": "III", "layout": "HorizontalStack" },
-        { "name": "IV", "layout": "UltrawideVerticalStack" },
-        { "name": "V", "layout": "Rows" }
+        { "name": "IV", "layout": "RightMainVerticalStack" },
+        { "name": "V", "layout": "RightMainVerticalStack" }
       ]
     }
   ]
